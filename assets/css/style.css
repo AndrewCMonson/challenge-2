@@ -15,7 +15,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: end; 
-    
     background-color: #e7d9cc;
     position: fixed;
     width: 100%;
@@ -72,48 +71,56 @@ header ul {
 main {
     height: 75vh;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: #e7d9cc;
     margin-top: 0;
 }
 
-.card {
-    width: 100%;
-    height: auto;
-    color: #233543;
-    margin: 0px 25px 0px 25px;
-    display: flex;
-    align-items: center;
-    overflow:-moz-hidden-unscrollable;
-}
-
-.aboutme-main {
+.section-titles {
+    width: 33.33333%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 66%;
     align-items: center;
-    justify-content: center;
-    padding: 0px 0px 0px 25px;
-    font-size: min(max(2.5vw, 25px), 20px);
-    
+    border-right:#233543 solid 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-p {
-    font-size: min(max(2.5vw, 25px), 20px)
-}
-
-
-
-h2 {
-    font-size: min(max(3.5vw, 35px), 50px);
-    border-right: #233543 solid 10px;
-    width: 33%;
-    height: 100%;
+.section-titles h2 {
+    height: 33%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 25px;
+    font-size: 35px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 66.66666%;
+}
+
+.section-body {
+    height: 33%;
+    display: flex;
+    padding-left: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content-1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
@@ -121,26 +128,3 @@ footer {
     
 }
 
-.project-container{
-    width: 66%;
-    padding-left: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.card ul {
-    display: flex;
-    width: 66%;
-    justify-content: space-around;
-    padding-left: 25px;
-}
-
-.card li {
-    display: inline;
-    font-size: min(max(1.5vw, 25px), 35px);
-}
-
-@media only screen {
-    
-}
