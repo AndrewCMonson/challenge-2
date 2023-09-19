@@ -15,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: end; 
-    border-bottom: solid #233543 .1875em;
+    
     background-color: #e7d9cc;
     position: fixed;
     width: 100%;
@@ -66,6 +66,7 @@ header ul {
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
+    
 }
 
 main {
@@ -83,6 +84,7 @@ main {
     margin: 0px 25px 0px 25px;
     display: flex;
     align-items: center;
+    overflow:-moz-hidden-unscrollable;
 }
 
 .aboutme-main {
@@ -131,9 +133,14 @@ footer {
     display: flex;
     width: 66%;
     justify-content: space-around;
+    padding-left: 25px;
 }
 
 .card li {
     display: inline;
-    font-size: min(max(1.5vw, 35px), 50px);
+    font-size: min(max(1.5vw, 25px), 35px);
+}
+
+@media only screen {
+    
 }
