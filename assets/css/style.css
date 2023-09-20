@@ -24,12 +24,13 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: end; 
+    align-items: center; 
     background-color: #e7d9cc;
     position: fixed;
     width: 100%;
     border-bottom: solid 5px #233543;
     z-index: 999;
+    height: 65px;
 }
 
 header h1 a {
@@ -48,8 +49,6 @@ header h1 a:hover {
 
 header ul {
     margin-right: 1.56em;
-    position: relative;
-    bottom: 6px;
     
 }
 
@@ -82,7 +81,7 @@ header ul {
 }
 
 main {
-    height: 150vh;
+    height: 125vh;
     display: flex;
     flex-wrap: nowrap;
     background-color: #e7d9cc;
@@ -91,7 +90,7 @@ main {
 
 .left-content {
     width: 33.33333%;
-    height: 150vh;
+    height: 125vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,6 +105,12 @@ main {
 
 #projects {
     height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    top: 25px;
 }
 
 #reachout {
@@ -128,24 +133,23 @@ main {
     flex-direction: column;
     width: 66.66666%;
     margin-right: 25px;
-    height: 150vh;
+    height: 125vh;
     margin-left: 25px;
 }
 
-.right-content p {
-    font-size: 2.5vh;
-    color:#233543;
-}
+
 
 .aboutme-content{
     height: 15%;
     display: flex;
-    padding-left: 25px;
     align-items: center;
     justify-content: center;
 }
 
-
+.aboutme-para {
+    font-size: 2.5vh;
+    color:#233543;
+}
 
 .projects-content {
     display: flex;
@@ -173,6 +177,7 @@ main {
     transition: width .5s, height .5s;
 }
 
+
 .project-1 {
     width: 100%;
     height: 50%;
@@ -190,11 +195,16 @@ main {
 .hidden-para {
     display: none;
     text-align: center;
+    font-size: 2.5vh;
+    color:#233543;
 }
 
 .shown-para {
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+    text-align: center;
+    font-size: 2.5vh;
+    color:#233543;
 }
 
 .project-1:hover .project-para,
@@ -305,3 +315,72 @@ footer {
     
 }
 
+@media only screen and (max-width: 1919px) {
+    .small-para{
+        font-size: 1.5vh;
+    }
+    .project-para {
+        height: 20%;
+    }
+}
+
+@media only screen and (max-width: 1071px) {
+    .project-para {
+        height: 15%;  
+    }
+    .sub-projects {
+        flex-wrap: wrap;
+    }
+    .project-2 {
+        width: 100%;
+        height: 50%;
+        margin-right: 0;
+    }
+    .project-3 {
+        width: 100%;
+        height: 50%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .aboutme-para {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .large-para {
+        font-size: 1.5vh;
+    }
+    .left-content h2 {
+        text-align: center;
+        font-size: 3vh;
+    }
+    .reachout-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        top:50px;
+    }
+    .reachout-content a {
+        font-size: 2vh;
+    }
+    .intro-image {
+        height: 250px;
+    }
+    .aboutme-para {
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav a {
+        font-size: 1.5vh;
+    }
+    .project-para {
+        display: none;
+    }
+    .left-content h2 {
+        font-size: 2vh;
+    }
+}
