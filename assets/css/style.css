@@ -338,9 +338,15 @@ footer {
 
 @media only screen and (max-width: 1071px) {
     .project-para {
-        height: 15%;
-          
+        height: 15%; 
     }
+    .project-2:hover .project-para {
+        height: 80%;
+    }
+    .project-3:hover .project-para {
+        height: 80%;
+    }
+
     .sub-projects {
         flex-wrap: wrap;
     }
@@ -358,7 +364,6 @@ footer {
     .aboutme-para {
         text-align: center;
     }
-    
 }
 
 @media only screen and (max-width: 850px) {
@@ -392,7 +397,10 @@ footer {
         font-size: 1.5vh;
     }
     .project-para {
-        display: none;
+        width: 50%;
+        position: relative;
+        top: 10%;
+        height: 25%;
     }
     .left-content h2 {
         font-size: 2vh;
@@ -402,6 +410,11 @@ footer {
     }
     .project-1 {
         height: 33%;
+        justify-content: center;
+    }
+    .project-2,
+    .project-3 {
+        justify-content: center;
     }
     #projects {
         height: 33%;
@@ -412,7 +425,7 @@ footer {
         box-shadow: 3px 3px 3px;
     }
     .project-2:hover {
-    position: relative;
+        position: relative;
         bottom: 2px;
         box-shadow: 3px 3px 3px;
 }
@@ -420,5 +433,8 @@ footer {
         position: relative;
         bottom: 2px;
         box-shadow: 3px 3px 3px;
+    }
+    .sub-projects {
+        margin-top: 0;
     }
 }
