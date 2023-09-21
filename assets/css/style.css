@@ -17,13 +17,8 @@
 }
 
 body {
-    width: 100%;
-    
-}
-
-button {
-    border-radius: 5px;
-    padding: 2px;
+    width: 100%; 
+    height: auto; 
 }
 
 header {
@@ -36,6 +31,14 @@ header {
     border-bottom: solid 5px #233543;
     z-index: 999;
     height: 65px;
+}
+
+main {
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #e7d9cc;
+    padding: -40px;
 }
 
 header h1 a {
@@ -85,17 +88,9 @@ header ul {
     
 }
 
-main {
-    height: 125vh;
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: #e7d9cc;
-    margin-top: 0;
-}
-
 .left-content {
     width: 33.33333%;
-    height: 125vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,13 +112,12 @@ main {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    position: relative;
-    top: 25px;
+    
 }
 
 #reachout {
-    height: 25%;
-    margin-top: 25px;
+    height: 10%;
+    margin-top: 100px;
 }
 
 .left-content h2 {
@@ -141,11 +135,9 @@ main {
     flex-direction: column;
     width: 66.66666%;
     margin-right: 25px;
-    height: 125vh;
+    height: 75vh;
     margin-left: 25px;
 }
-
-
 
 .aboutme-content{
     height: 15%;
@@ -159,154 +151,85 @@ main {
     color:#233543;
 }
 
-.projects-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 50%;
-
-}
-
-.project-para {
-    font-size: 2.5vh;
-    height: 25%;
-    width: 25%;
-    background-color: #e7d9cc;
-    color:#233543;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-    border:#233543 solid 1px;
-    border-radius: 25px;
-    transition: width .5s, height .5s;
-}
-
-
-.project-1 {
-    width: 100%;
+.projects-container {
     height: 50%;
     display: flex;
-    justify-content: start;
-    align-items: end;
-    background: url("../resources/mountain_landscape16_generated.png");
-    background-position: 25%;
-    background-repeat: none;
-    background-size: cover;
-    border:#233543 solid 3px;
-    border-radius: 50px;
-}
-
-
-
-.hidden-para {
-    display: none;
-    text-align: center;
-    font-size: 2.5vh;
-    color:#233543;
-}
-
-.hidden-para a {
-    text-decoration: none;
-    text-align: center;
-    font-size: 2.5vh;
-    color:#233543;
-}
-
-.shown-para {
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-    text-align: center;
-    font-size: 2.5vh;
-    color:#233543;
-}
-
-.project-1:hover .project-para,
-.project-2:hover .project-para,
-.project-3:hover .project-para{
-    height: 90%;
-    width: 100%;
-    margin-right: 25px;
-}
-
-.project-1:hover .hidden-para {
-    display: block;
-    -webkit-animation: fadeIn 2s;
-    animation: fadeIn 2s;
-}
-
-.project-1:hover .shown-para{
-    display: none;
-}
-
-.project-2:hover .hidden-para {
-    display: block;
-    -webkit-animation: fadeIn 2s;
-    animation: fadeIn 2s;
-}
-
-.project-2:hover .shown-para{
-    display: none;
-}
-
-.project-3:hover .hidden-para {
-    display: block;
-    -webkit-animation: fadeIn 2s;
-    animation: fadeIn 2s;
-}
-
-.project-3:hover .shown-para{
-    display: none;
-}
-
-.sub-projects {
-    display: flex;
     flex-wrap: wrap;
+    gap: 50px 5px;
     justify-content: space-between;
+}
+
+.main-project {
+    background: url("../resources/mountain_landscape16_generated.png");
     width: 100%;
-    height: 50%;
-    align-items: center; 
-    margin-top: 25px; 
-    margin-bottom: 25px;  
-}
-
-.project-2 {
-    width: 48%;
-    height: 100%;
-    background: url("../resources/WallpaperDog-10933804.png");
-    background-position: 80%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     background-size: cover;
-    display: flex;
-    align-items: end;
-    border:#233543 solid 3px;
-    margin-top: 25px;
-    border-radius: 50px;
+    border:#233543 solid 10px;
+    border-radius: 80px 80px 40px 40px;
 }
 
-.project-3 {
-    width: 48%;
+.main-project p,
+.sub-project p {
     height: 100%;
+    width: 100%;  
+}
+
+.main-project a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    bottom: 20px;
+    left: 50px;
+    height: 100%;
+    font-size: 1.5vh;
+    text-shadow: 2px 2px 2px #233543;
+}
+
+.sub-project {
+    width: 48%;
+    height: auto;
+    border:#233543 solid 10px;
+    border-radius: 40px 40px 80px 80px;
+}
+
+.sub-project a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    bottom: 20px;
+    left: 50px;
+    height: 100%;
+    font-size: 1.5vh;
+    text-shadow: 2px 2px 2px #233543;
+}
+
+#project-1 {
     background: url("../resources/WallpaperDog-10933533.png");
-    background-position: 80%;
+    background-repeat: no-repeat;
+    background-position: 25%;
     background-size: cover;
-    display: flex;
-    justify-content: start;
-    align-items: end;
-    border:#233543 solid 3px;
-    border-radius: 50px;
-    margin-top: 25px;
+
 }
 
-#hidden-proj {
-    display: none;
+#project-2 {
+    background: url("../resources/WallpaperDog-10933804.png");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-size: cover;
 }
 
 .reachout-content {
-    margin-top: 25px;
-    height: 25%;
+    margin-top: 100px;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -320,132 +243,30 @@ main {
     
 }
 
-.reachout-content a:hover {
-    text-decoration: underline;
-    position: relative;
-    bottom: 2px;
-
-    right: 2px;
-}
-
 footer {
     background-color: #233543;
-    color:#e7d9cc;
+    color:white;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-top: -40px;
 }
 
-@media only screen and (max-width: 1919px) {
-    .small-para{
-        font-size: 1.5vh;
-    }
-    .project-para {
-        height: 20%;
-    }
+.reachout-content a:hover {
+    text-decoration: underline;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
 }
 
-@media only screen and (max-width: 1071px) {
-    .project-para {
-        height: 15%; 
-    }
-    .project-2:hover .project-para {
-        height: 80%;
-    }
-    .project-3:hover .project-para {
-        height: 80%;
-    }
-
-    .sub-projects {
-        flex-wrap: wrap;
-    }
-    .project-2 {
-        width: 100%;
-        height: 50%;
-        margin-right: 0;
-    }
-    .project-3 {
-        width: 100%;
-        height: 50%;
-        margin-left: 0;
-        margin-top: 25px;
-    }
-    .aboutme-para {
-        text-align: center;
-    }
+.main-project:hover,
+.sub-project:hover {
+    position: relative;
+    bottom: 5px;
+    right: 2px;
+    box-shadow: black 5px 5px 5px;
 }
 
-@media only screen and (max-width: 850px) {
-    .large-para {
-        font-size: 1.5vh;
-    }
-    .left-content h2 {
-        text-align: center;
-        font-size: 3vh;
-    }
-    .reachout-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
-        top:50px;
-    }
-    .reachout-content a {
-        font-size: 2vh;
-    }
-    .intro-image {
-        height: 250px;
-    }
-    .aboutme-para {
-        font-size: 2vh;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .nav a {
-        font-size: 1.5vh;
-    }
-    .project-para {
-        width: 50%;
-        position: relative;
-        top: 10%;
-        height: 25%;
-    }
-    .left-content h2 {
-        font-size: 2vh;
-    }
-    .projects-content {
-        height: 33%;  
-    }
-    .project-1 {
-        height: 33%;
-        justify-content: center;
-    }
-    .project-2,
-    .project-3 {
-        justify-content: center;
-    }
-    #projects {
-        height: 33%;
-    }
-    .project-1:hover {
-        position: relative;
-        bottom: 2px;
-        box-shadow: 3px 3px 3px;
-    }
-    .project-2:hover {
-        position: relative;
-        bottom: 2px;
-        box-shadow: 3px 3px 3px;
-}
-    .project-3:hover {
-        position: relative;
-        bottom: 2px;
-        box-shadow: 3px 3px 3px;
-    }
-    .sub-projects {
-        margin-top: 0;
-    }
-}
+/* -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s; */
