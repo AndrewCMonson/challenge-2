@@ -110,7 +110,7 @@ main {
 
 #reachout {
     height: 10%;
-    margin-top: 100px;
+    margin-top: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,7 +225,7 @@ h2 {
 }
 
 .reachout-content {
-    margin-top: 6.25em;
+    margin-top: 75px;
     height: 10%;
     width: 100%;
     display: flex;
