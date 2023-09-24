@@ -1,3 +1,7 @@
+:root {
+    --maincolor: #233543;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +9,6 @@
     background-color: transparent;
     font-size: 16px;
     box-sizing: border-box;
-}
-
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
 }
 
 body {
@@ -28,9 +23,55 @@ header {
     background-color: #e7d9cc;
     position: fixed;
     width: 100%;
-    border-bottom: solid 5px #233543;
+    border-bottom: solid .3125em var(--maincolor);
     z-index: 999;
-    height: 65px;
+    height: 4.0625em;
+    
+}
+
+header h1 a {
+    font-size: min(max(2.5vw, 25px), 30px);
+    margin-left: 1.875em;
+    text-decoration: none;
+    color: var(--maincolor);
+}
+
+header h1 a:hover {
+    position: relative;
+    bottom: 0.125em;
+    right: 0.125em;
+    text-decoration: underline;
+}
+
+nav {
+    margin-right: 1.875em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--maincolor);
+    font-size: min(max(2.5vw, 25px), 20px);
+}
+
+nav ul a:hover {
+    position: relative;
+    bottom: 0.125em;
+    right: 0.125em;
+    text-decoration: underline;
+}
+
+nav ul li {
+    display: inline; 
+    padding: .31em; 
+}
+
+figure {
+    background: url('../resources/mountainranges.png');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 28.125em;
+    
 }
 
 main {
@@ -38,54 +79,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
     background-color: #e7d9cc;
-    padding: -40px;
-}
-
-header h1 a {
-    font-size: min(max(2.5vw, 25px), 30px);
-    margin-left: 1.56em;
-    text-decoration: none;
-    color: #233543;
-}
-
-header h1 a:hover {
-    position: relative;
-    bottom: 2px;
-    right: 2px;
-    text-decoration: underline;
-}
-
-header ul {
-    margin-right: 1.56em;
-    
-}
-
-.nav a {
-    text-decoration: none;
-    color: #233543;
-    font-size: min(max(2.5vw, 25px), 20px);
-}
-
-.nav a:hover {
-    position: relative;
-    bottom: 2px;
-    right: 2px;
-    text-decoration: underline;
-}
-
-.nav li {
-    display: inline; 
-    padding: .31em;
-    font-size: min(max(2.5vw, 25px), 20px);
-}
-
-.intro-image {
-    background: url('../resources/mountainranges.png');
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
-    
+    padding: -2.5em;
 }
 
 .left-content {
@@ -94,9 +88,9 @@ header ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right:#233543 solid 10px;
-    padding-left: 25px;
-    padding-right: 25px;
+    border-right:var(--maincolor) solid 10px;
+    padding-left: 1.5625em;
+    padding-right: 1.5625em;
 }
 
 #aboutme {
@@ -111,32 +105,34 @@ header ul {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
-    
+    align-items: center;   
 }
 
 #reachout {
     height: 10%;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.left-content h2 {
+h2 {
     height: 33%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 4vh;
-    color:#233543;
+    color: var(--maincolor);
 }
 
 .right-content {
     display: flex;
     flex-direction: column;
     width: 66.66666%;
-    margin-right: 25px;
+    margin-right: 1.5625em;
     height: 75vh;
-    margin-left: 25px;
+    margin-left: 1.5625em;
 }
 
 .aboutme-content{
@@ -148,7 +144,8 @@ header ul {
 
 .aboutme-para {
     font-size: 2.5vh;
-    color:#233543;
+    color:var(--maincolor);
+    text-align: center;
 }
 
 .projects-container {
@@ -157,6 +154,7 @@ header ul {
     flex-wrap: wrap;
     gap: 50px 5px;
     justify-content: space-between;
+    margin-right: 1.5625em;
 }
 
 .main-project {
@@ -166,7 +164,7 @@ header ul {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    border:#233543 solid 10px;
+    border:var(--maincolor) solid 10px;
     border-radius: 80px 80px 40px 40px;
 }
 
@@ -176,7 +174,7 @@ header ul {
     width: 100%;  
 }
 
-.main-project a{
+.main-project a {
     text-decoration: none;
     color: white;
     display: flex;
@@ -184,17 +182,17 @@ header ul {
     justify-content: end;
     position: relative;
     bottom: 20px;
-    left: 50px;
+    left: 25px;
     height: 100%;
-    font-size: 1.5vh;
-    text-shadow: 2px 2px 2px #233543;
+    font-size: 2vh;
+    text-shadow: 2px 2px 2px var(--maincolor);
 }
 
 .sub-project {
     width: 48%;
     height: auto;
-    border:#233543 solid 10px;
-    border-radius: 40px 40px 80px 80px;
+    border:var(--maincolor) solid 10px;
+    border-radius: 40px;
 }
 
 .sub-project a {
@@ -205,10 +203,10 @@ header ul {
     justify-content: end;
     position: relative;
     bottom: 20px;
-    left: 50px;
+    left: 25px;
     height: 100%;
     font-size: 1.5vh;
-    text-shadow: 2px 2px 2px #233543;
+    text-shadow: 2px 2px 2px var(--maincolor);
 }
 
 #project-1 {
@@ -222,13 +220,12 @@ header ul {
 #project-2 {
     background: url("../resources/WallpaperDog-10933804.png");
     background-repeat: no-repeat;
-    background-origin: padding-box;
     background-position: center;
     background-size: cover;
 }
 
 .reachout-content {
-    margin-top: 100px;
+    margin-top: 6.25em;
     height: 10%;
     width: 100%;
     display: flex;
@@ -240,11 +237,10 @@ header ul {
     text-decoration: none;
     color: #233543;
     font-size: 2.5vh;
-    
 }
 
 footer {
-    background-color: #233543;
+    background-color: var(--maincolor);
     color:white;
     height: 40px;
     display: flex;
@@ -268,5 +264,80 @@ footer {
     box-shadow: black 5px 5px 5px;
 }
 
-/* -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s; */
+
+
+@media only screen and (max-width: 1000px) {
+    #aboutme,
+    #reachout {
+        justify-content: left;
+    }
+    #projects {
+        align-items: start;
+    }
+    h2 {
+        font-size: 2.5vh;
+    }
+    .aboutme-para {
+        font-size: 2vh
+    }
+    .main-project a {
+        left: 25px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .reachout-content {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .reachout-content p {
+        width: 50%;
+    }
+    .projects-container {
+        gap: 5px;
+    }
+    .main-project {
+        border-radius: 40px;
+    }
+    .sub-project{
+        width: 100%;
+    }
+    .main-project a,
+    .sub-project a {
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .projects-container {
+        gap: 5px;
+        margin-right: 0px;
+    }
+    .main-project {
+        border-radius: 15px;
+    }
+    .sub-project {
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    header h1 a {
+        margin-left: 1em;
+    }
+    nav {
+        margin-right: 1em;
+    }
+    nav a {
+        font-size: 1.75vh;
+    }
+    #reachout {
+        margin-top: 50px;
+    }
+    .reachout-content {
+        margin-top: 50px;
+    }
+}
+  
